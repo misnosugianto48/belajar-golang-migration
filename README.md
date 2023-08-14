@@ -21,3 +21,9 @@ migrate -database "mysql://db_user@tcp(db_host:db_port)/db_name" -path db/migrat
 migrate -database "mysql://db_user@tcp(db_host:db_port)/db_name" -path db/migrations down
 
 // use number to migrate each version //
+
+### Version
+
+migrate -database "mysql://db_user@tcp(db_host:db_port)db_name" -path db/migrations force migrate_version
+
+// force migrate to change schema_migrations in database where new version has a dirty state //
